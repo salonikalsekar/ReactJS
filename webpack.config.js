@@ -19,7 +19,7 @@ var SRC_DIR = path.resolve(__dirname, "src");
 //regex: ? have a look at all js files, include has files to be scanned for just files.
 
 
-var config={
+module.exports={
     entry: SRC_DIR + "/app/index.js",
     output: {
         path: DIST_DIR + "/app",
@@ -27,7 +27,7 @@ var config={
         publicPath: "/app/"
     },
     
-    modules: {
+    module: {
         loaders:[
             {
                 test: /\.js?/,
@@ -41,4 +41,3 @@ var config={
     }
 };
 
-module.exports= config;
